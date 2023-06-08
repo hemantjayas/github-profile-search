@@ -38,7 +38,7 @@
   background-color: white;
 }
 .search_container .main input {
-  width: 90%;
+  width: 95%;
   font-size: 1rem;
   outline: none;
   color: #626161;
@@ -46,10 +46,10 @@
   border: none;
 }
 .search_container .main input::-moz-placeholder {
-  color: #626161;
+  color: #908e8e;
 }
 .search_container .main input::placeholder {
-  color: #626161;
+  color: #908e8e;
 }
 .search_container .main div {
   width: 2rem;
