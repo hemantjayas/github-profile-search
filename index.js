@@ -2,7 +2,6 @@
 let input = document.getElementById("searchbar")
 input.addEventListener('input', (e) => {
     const inputText = e.target.value
-    console.log(inputText)
     debounceApi(() => { getData(inputText) }, 200)
 
 })
@@ -11,10 +10,7 @@ input.addEventListener('input', (e) => {
 async function getData(input) {
     try {
         const res = await fetch(`https://api.github.com/search/users?q=${input}`);
-        const data = await res.json()
-        console.log("fetched data", data.items)
-
-
+        const data = await res.json();
         showresult(data.items)
 
     } catch (error) {
@@ -46,15 +42,13 @@ const showresult = (data) => {
             let imagewrap = document.createElement("div");
             let profile = document.createElement("img");
             let title = document.createElement("div");
+            
             const anchor = document.createElement('a');
             anchor.setAttribute('href', element.html_url)
 
             imagewrap.setAttribute('class', "profile");
             container.setAttribute('class', "searchmain");
-            container.addEventListener("click", () => {
-
-            })
-
+          
             profile.src = element.avatar_url;
             title.textContent = element.login
 
