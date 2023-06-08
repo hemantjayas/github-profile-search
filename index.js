@@ -3,7 +3,7 @@ let input = document.getElementById("searchbar")
 input.addEventListener('input', (e) => {
     const inputText = e.target.value
     console.log(inputText)
-    debounceApi(() => { getData(inputText) }, 500)
+    debounceApi(() => { getData(inputText) }, 200)
 
 })
 
@@ -15,7 +15,7 @@ async function getData(input) {
         console.log("fetched data", data.items)
 
 
-
+        showresult(data.items)
 
     } catch (error) {
         console.log("error while fetching data", error.message)
@@ -29,5 +29,43 @@ const debounceApi = (func, delay) => {
     debouncetime = setTimeout(func, delay)
 
 }
+
+
+// displaying the search result
+let resultBox = document.getElementById("search_result")
+resultBox.innerHTML = ""
+console.log(resultBox.textContent)
+
+const showresult = (data) => {
+    resultBox.innerHTML = ""
+    if (data.length === 0) {
+        resultBox.textContent = ""
+    } else {
+        data.forEach(element => {
+            let container = document.createElement("div");
+            let imagewrap = document.createElement("div");
+            let profile = document.createElement("img");
+            let title = document.createElement("div");
+            const anchor = document.createElement('a');
+            anchor.setAttribute('href', element.html_url)
+
+            imagewrap.setAttribute('class', "profile");
+            container.setAttribute('class', "searchmain");
+            container.addEventListener("click", () => {
+
+            })
+
+            profile.src = element.avatar_url;
+            title.textContent = element.login
+
+            imagewrap.append(profile)
+            container.append(imagewrap, title);
+            anchor.append(container)
+            resultBox.appendChild(anchor)
+        });
+    }
+
+}
+
 
 
