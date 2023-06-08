@@ -1,3 +1,32 @@
-.h1tag{
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.search_container {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+
+    .main {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        background-color: white;
+
+        input {
+            width: 90%;
+
+            font-size: 1rem;
+            outline: none;
+            color: #626161;
+            background: transparent;
+            border: none;
+        }
+    }
 }
