@@ -67,6 +67,13 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.search_container .main button {
+  padding: 0.7rem 2rem;
+  background-color: #626161;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
 
 #search_result {
   width: 100%;

@@ -25,6 +25,7 @@ To run this search functionality locally, follow these steps:
 - Clone the repository: https://github.com/hemantjayas/github-profile-search
 
 - Open the index.html file in your web browser.
+- Assignment Deployment Link: https://hemantjayas.github.io/github-profile-search/
 ## Usage
 
 - Enter a search term in the provided input field.
@@ -39,3 +40,14 @@ You can customize this search functionality according to your specific needs:
 - Modify the HTML structure to match your design requirements.
 - Update the API endpoint in the JavaScript code to fetch data from your desired API.
 - Adjust the CSS styles to achieve the desired visual appearance.
+
+
+
+
+
+
+
+
+
+
+

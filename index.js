@@ -4,7 +4,7 @@ input.addEventListener('input', (e) => {
     const inputText = e.target.value
     debounceApi(() => { getData(inputText) }, 200)
 
-})
+});
 
 // function for fetching the data from the Api through fetch method and async/await 
 async function getData(input) {
